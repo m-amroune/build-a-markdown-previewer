@@ -34,6 +34,8 @@ There's also [links](https://www.freecodecamp.com), and
   - Some are bulleted.
       - With different indentation levels.
         - That look like this.
+
+        ![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
 `;
 
 
@@ -43,7 +45,7 @@ function App() {
     <div className="App">
       <h1>Markdown Previewer</h1>
       <div className="boxes-container" >
-        <textarea name="editor" id="editor" value={markdownText}></textarea>
+        <textarea name="editor" id="editor" value={markdownText} onChange={(e)=> setMarkdownText(e.target.value)}></textarea>
         <div id="preview" >
           <ReactMarkdown>{markdownText}</ReactMarkdown>
         </div>
